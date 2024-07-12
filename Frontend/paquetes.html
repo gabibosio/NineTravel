@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/paquetes.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title> NineTravel</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img class="LogoNineT" src="assets/img/logotex.png" alt="logo">
+            <nav id="menu_list">
+                <ul>
+                    <li><a href="index.html" title="Inicio"><div class="bi bi-house-fill"></div> <span class="icon_text">Inicio</span></a></li>
+                    <li><a href="destinos.html" title="Destinos"><div class="bi bi-geo-fill"></div> <span class="icon_text">Destinos</span> </a></li>
+                    <li><a href="#" title="Paquetes"><div class="bi bi-folder-fill"></div> <span class="icon_text">Paquetes</span> </a></li>
+                    <li><a href="contacto.html" title="Contacto"><div class="bi bi-person-badge"></div> <span class="icon_text">Contacto</span> </a></li>
+                    <li><a href="Reservas.html" title="Reservas"><div class="bi bi-airplane-engines"></div><span >Mis Reservas</span> </a></li>
+                </ul>
+            </nav>
+            <div id="list" onclick="toggleMenu()">
+                <i class="bi bi-list"></i>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+         <h1> Paquetes imperdibles </h1>
+        
+
+         <h2> Argentina </h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="assets/img/cordoba.jpg" alt="cordoba">
+                <div class="card-details">
+                    <div class="trip-duration">3 NOCHES - AGOSTO</div>
+                    <h3>Cordoba ciudad </h3>
+                    <div class="trip-options">
+                        <span>VUELO</span>
+                        <span>HOTEL</span>
+                        <span>TRASLADOS</span>
+                    </div>
+                    <div class="price">Precio por persona desde $230.900</div>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                        Reservar
+                      </button>
+                </div>
+            </div>
+            
+
+        <div class="card">
+            <img src="assets/img/bariloche.jpg" alt="Bariloche">
+            <div class="card-details">
+                <div class="trip-duration">4 NOCHES - JUNIO</div>
+                <h3>Bariloche</h3>
+                <div class="trip-options">
+                    <span>BUS</span>
+                    <span>HOTEL</span>
+                    <span>SEGURO</span>
+                </div>
+                <div class="price">Precio por persona desde $400.784</div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Reservar
+                  </button>
+            </div>
+        </div>
+
+        <!-- MODAL -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Reservas</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-post">
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Desde</label>
+                          <input type="date" class="form-control desde" id="exampleFormControlInput1" name="fecha_ingreso">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Hasta</label>
+                            <input type="date" class="form-control hasta" id="exampleFormControlInput1" name="fecha_salida">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Cantidad de Personas</label>
+                            <input type="number" class="form-control cant" id="exampleFormControlInput1" name="cant_personas">
+                        </div>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  <button id="btn-post" type="submit" class="btn btn-primary">Confirmar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="card">
+            <img src="assets/img/talampaya_laRioja.jpg" alt="Puerto Madryn">
+            <div class="card-details">
+                <div class="trip-duration">4 NOCHES - JULIO</div>
+                <h3>La Rioja. Parque Nacional Talampaya</h3>
+                <div class="trip-options">
+                    <span>BUS</span>
+                    <span>HOTEL</span>
+                    <span>SEGURO</span>
+                </div>
+                <div class="price">Precio por persona desde $205.780</div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Reservar
+                  </button>
+            </div>
+        </div>
+    </div>
+
+    <h2> Brasil </h2>
+    <div class="cards-container">
+        <div class="card">
+            <img src="assets/img/P_Galinhas.jpg" alt="P_Galinhas">
+            <div class="card-details">
+                <div class="trip-duration">4 NOCHES - JULIO</div>
+                <h3> GALINHAS</h3>
+                <div class="trip-options">
+                    <span>VUELO</span>
+                    <span>HOTEL</span>
+                    <span>TRASLADOS</span>
+                </div>
+                <div class="price">Precio por persona desde $600.941</div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Reservar
+                  </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/Foz.jpg" alt="Foz do Iguaçu">
+            <div class="card-details">
+                <div class="trip-duration">3 NOCHES - DICIEMBRE</div>
+                <h3> Foz do Iguaçu</h3>
+                <div class="trip-options">
+                    <span>VUELO</span>
+                    <span>HOTEL</span>
+                    <span>TRASLADOS</span>
+                </div>
+                <div class="price">Precio por persona desde $335.941</div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Reservar
+                  </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/Pao_Azucar.jpg" alt="Pao_Azucar">
+            <div class="card-details">
+                <div class="trip-duration">3 NOCHES - JULIO</div>
+                <h3>Pão de Açúcar </h3>
+                <div class="trip-options">
+                    <span>VUELO</span>
+                    <span>HOTEL</span>
+                    <span>TRASLADOS</span>
+                </div>
+                <div class="price">Precio por persona desde $740.680</div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Reservar
+                  </button>
+            </div>
+        </div>
+    </div>
+
+    <h2> Estados Unidos </h2>
+    <div class="cards-container">
+   
+        <div class="card">
+            <img src="assets/img/bahiaHawai.jpg" alt="bahiaHawai">
+            <div class="card-details">
+                <div class="trip-duration">5 NOCHES - JULIO</div>
+                <h3> Hawaii </h3>
+                <div class="trip-options">
+                    <span>VUELO</span>
+                    <span>HOTEL</span>
+                    <span>TRASLADOS</span>
+                </div>
+                <div class="price">Precio por persona desde $335.941</div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Reservar
+                  </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/newYork.jpg" alt="newYork">
+            <div class="card-details">
+                <div class="trip-duration">3 NOCHES - JULIO</div>
+                <h3> New York</h3>
+                <div class="trip-options">
+                    <span>VUELO</span>
+                    <span>HOTEL</span>
+                    <span>TRASLADOS</span>
+                </div>
+                <div class="price">Precio por persona desde $1020.941</div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Reservar
+                  </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/Mauna_Kea.jpg" alt="Mauna_Kea">
+            <div class="card-details">
+                <div class="trip-duration">2 NOCHES - MARZO</div>
+                <h3> Mauna Kea </h3>
+                <div class="trip-options">
+                    <span>VUELO</span>
+                    <span>HOTEL</span>
+                    <span>TRASLADOS</span>
+                </div>
+                <div class="price">Precio por persona desde $900.100</div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Reservar
+                  </button>
+            </div>
+        </div>
+        
+    </div>
+    </main>
+    
+
+    <footer>
+        <!-- princ-->
+        <div class="conteiner-footer">
+            <p class="pie">
+                <i class="bi bi-geo-alt"></i> <span> Av. Caseros 3040, Buenos Aires, Argentina.</span>
+            </p>
+            <p class="pie">
+                <i class="bi bi-envelope-at"></i> <span> TravelNine@gmail.com </span>
+            </p>
+            <p class="pie">
+                <i class="bi bi-telephone-inbound"></i> <span> 4250-7030 </span>
+            </p>
+            <p class="pie">
+                <i class="bi bi-phone"></i> <span> +54 9 11 2044-5680 </span>
+            </p>
+        </div>
+
+        <div class="text-center">
+            <p>Seguinos para mas novedades! </p>
+            <ul class="list-unstyled list-inline">
+                <li>
+                    <a href="#" class="icono-foter"> <i class="fab fa-facebook"> </i> </a>
+                </li>
+
+                <li>
+                    <a href="#" class="icono-foter"> <i class="fab fa-twitter"> </i> </a>
+                </li>
+
+                <li>
+                    <a href="#" class="icono-foter"> <i class="fab fa-google-plus"> </i> </a>
+                </li>
+
+                <li>
+                    <a href="#" class="icono-foter"> <i class="fab fa-linkedin"> </i> </a>
+                </li>
+
+                <li>
+                    <a href="#" class="icono-foter"> <i class="fab fa-youtube"> </i> </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="text-center">
+            <p> &copy; 2024 NineTravel Todos los derechos reservados. </p>
+        </div>
+
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="./assets/js/script.js"></script>
+<script src="./assets/js/post.js"></script>
+</body>
+</html>

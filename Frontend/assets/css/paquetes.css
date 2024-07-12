@@ -1,0 +1,75 @@
+h1 {
+    font-family: "Roboto Condensed", sans-serif;
+    color: var(--five-color);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-details {
+    padding: 1rem;
+}
+
+.trip-duration {
+    background-color: var(--bg-color);
+    color: #f1f1f1;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+.trip-options {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.trip-options span {
+    background-color: #f1f1f1;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.price {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 1rem;
+}
+
+/* TAMAÑO DEL DESKTOP */
+@media screen and (min-width: 1024px) {
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 2rem;
+        justify-content: center;
+    }
+}
+
+
+/* TAMAÑO DEL TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {}
+
+/* TAMAÑO DEL SMARTPHONE*/
+@media screen and (max-width: 767px) {}
